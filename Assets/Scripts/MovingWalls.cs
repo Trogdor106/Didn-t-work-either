@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlatform : MonoBehaviour
+public class MovingWalls : MonoBehaviour
 {
-    float speed = 1.5f;
+    float speed = 1.0f;
     float totalTime = 0.0f;
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, 0, speed * Time.deltaTime); //Move object 1.5 units per second
+        transform.position += new Vector3(speed * Time.deltaTime, 0, 0); //Move object 1.5 units per second
         totalTime += Time.deltaTime;
 
-        if (totalTime >= 5.0f) //If the object has moved for 5 seconds, reverse it.
+        if (totalTime >= 4.5f) //If the object has moved for 5 seconds, reverse it.
         {
             speed *= -1.0f;
             totalTime = 0.0f;
