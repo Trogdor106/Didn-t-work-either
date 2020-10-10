@@ -65,7 +65,7 @@ public class PluginManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        {
+        { //To check how much time goes by between each press of spacebar.
             float currentTime = Time.time;
             float checkpointTime = currentTime - lastTime;
             lastTime = currentTime;
